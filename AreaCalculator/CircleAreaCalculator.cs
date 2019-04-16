@@ -19,9 +19,9 @@ namespace AreaCalculator
         }
         #endregion public ctor
 
+        #region public methods
         public double CalcArea()
-        {
-            throw new NotImplementedException();
-        }
+            => Math.PI * R * R;
+        #endregion public methods
     }
 }
