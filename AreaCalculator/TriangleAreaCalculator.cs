@@ -29,6 +29,9 @@ namespace AreaCalculator
 
         #region public methods
         public double CalcArea() => HeronsFormulaImpl();
+
+        public bool IsRectangular()
+            => Math.Abs(A * A + B * B - C * C) < 0.001;
         #endregion public methods
 
         #region private methods
