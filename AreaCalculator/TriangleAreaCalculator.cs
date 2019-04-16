@@ -4,10 +4,13 @@ namespace AreaCalculator
 {
     public class TriangleAreaCalculator : IAreaCalculator
     {
+        #region public properties
         public double A { get; }
         public double B { get; }
         public double C { get; }
+        #endregion public properties
 
+        #region public ctor
         public TriangleAreaCalculator(double a, double b, double c)
         {
             Regularize(ref a, ref b, ref c);
@@ -22,12 +25,13 @@ namespace AreaCalculator
 
             (A, B, C) = (a, b, c);
         }
+        #endregion public ctor
 
-        public double CalcArea()
-        {
-            throw new NotImplementedException();
-        }
+        #region public methods
+        public double CalcArea() => HeronsFormulaImpl();
+        #endregion public methods
 
+        #region private methods
         private void Regularize(ref double a, ref double b, ref double c)
         {
             Regularize(ref a, ref b);
@@ -39,5 +43,12 @@ namespace AreaCalculator
         {
             if (a > b) (a, b) = (b, a);
         }
+
+        private double HeronsFormulaImpl()
+        {
+            var p = (A + B + C) / 2;
+            return Math.Sqrt(p * (p - A) * (p - B) * (p - C));
+        }
+        #endregion private methods
     }
 }
