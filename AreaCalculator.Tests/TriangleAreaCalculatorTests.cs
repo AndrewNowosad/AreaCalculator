@@ -56,5 +56,21 @@ namespace AreaCalculator.Tests
                 actual: t.CalcArea(),
                 precision: 3);
         }
+
+        [Theory]
+        [InlineData(3, 4, 5, true)]
+        [InlineData(4, 5, 3, true)]
+        [InlineData(3, 4, 4, false)]
+        [InlineData(13, 12, 6, false)]
+        [InlineData(5, 13, 12, true)]
+        [InlineData(1, 1, 1.414, true)]
+        public void IsRectangularTest(double a, double b, double c, bool isRectangular)
+        {
+            var t = new TriangleAreaCalculator(a, b, c);
+
+            Assert.Equal(
+                expected: isRectangular,
+                actual: t.IsRectangular());
+        }
     }
 }
