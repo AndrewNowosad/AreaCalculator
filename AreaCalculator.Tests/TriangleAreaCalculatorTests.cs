@@ -40,10 +40,21 @@ namespace AreaCalculator.Tests
             var t = new TriangleAreaCalculator(a, b, c);
         }
 
-        [Fact]
-        public void CalcAreaTest()
+        [Theory]
+        [InlineData(3, 4, 5, 6)]
+        [InlineData(3, 3, 3, 3.897)]
+        [InlineData(5, 4, 3, 6)]
+        [InlineData(13, 5, 12, 30)]
+        [InlineData(1, 1.5, 2, 0.726)]
+        [InlineData(12, 10, 8, 39.686)]
+        public void CalcAreaTest(double a, double b, double c, double s)
         {
+            var t = new TriangleAreaCalculator(a, b, c);
 
+            Assert.Equal(
+                expected: s,
+                actual: t.CalcArea(),
+                precision: 3);
         }
     }
 }
