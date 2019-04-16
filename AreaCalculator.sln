@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AreaCalculator", "AreaCalcu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AreaCalculator.Tests", "AreaCalculator.Tests\AreaCalculator.Tests.csproj", "{DD72C011-2FD0-4BF3-9B94-5C32C86A5A57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AreaCalculator.Samples", "AreaCalculator.Samples\AreaCalculator.Samples.csproj", "{2C9B2D03-E00E-411F-897D-0417E5526F9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DD72C011-2FD0-4BF3-9B94-5C32C86A5A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD72C011-2FD0-4BF3-9B94-5C32C86A5A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD72C011-2FD0-4BF3-9B94-5C32C86A5A57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C9B2D03-E00E-411F-897D-0417E5526F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C9B2D03-E00E-411F-897D-0417E5526F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C9B2D03-E00E-411F-897D-0417E5526F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C9B2D03-E00E-411F-897D-0417E5526F9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
